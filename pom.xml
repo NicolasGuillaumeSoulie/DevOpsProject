@@ -45,14 +45,14 @@
     <repositories>
         <repository>
             <id>myMavenRepo.read</id>
-            <url>https://mymavenrepo.com/repo/LqSuvJ4gl3eXrPM8xgOI/</url>
+            <url>https://mymavenrepo.com/repo/bb7ditFEQTlpWDntneRC/</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
             <id>myMavenRepo.write</id>
-            <url>https://mymavenrepo.com/repo/IvKEghzCMx2bW9hAlx1D/</url>
+            <url>https://mymavenrepo.com/repo/d3RWQWGz5tZQCA679oWU/</url>
         </repository>
     </distributionManagement>
 
