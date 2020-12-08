@@ -21,3 +21,24 @@ Configuration globale des outils
 			=> version 3.5.0
 
 
+# Add tmp/set.xml to VM #
+
+$ vim /tmp/set.xml
+	$ i
+	<settings>
+		<servers>
+			<server>
+				<id>myMavenRepo.read</id>
+				<username>myMavenRepo</username>
+				<password>PASS</password>
+			</server>
+			<server>
+				<id>myMavenRepo.write</id>
+				<username>myMavenRepo</username>
+				<password>PASS</password>
+			</server>
+		</servers>
+	</settings>
+	$ :wq
+$ cd /tmp
+$ chmod 777 set.xml
