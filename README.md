@@ -1,10 +1,28 @@
 ## DevOpsProject ##
 
-# Configuration de Jenkins #
+# Add tmp/set.xml to VM #
 
-Plugins
-	Install
-		- Pipeline Maven Integration Plugin
+$ vim /tmp/set.xml
+	$ i
+	<settings>
+		<servers>
+			<server>
+				<id>myMavenRepo.read</id>
+				<username>myMavenRepo</username>
+				<password>DevOpsJEE404</password>
+			</server>
+			<server>
+				<id>myMavenRepo.write</id>
+				<username>myMavenRepo</username>
+				<password>DevOpsJEE404</password>
+			</server>
+		</servers>
+	</settings>
+	$ :wq
+$ cd /tmp
+$ chmod 777 set.xml
+
+# Configuration de Jenkins #
 
 Configuration globale des outils
 	Configuration Maven
@@ -16,29 +34,24 @@ Configuration globale des outils
 				=> /tmp/set.xml
 
 	Maven
-		Nom =>
+		Nom => 3_5_0
 		Install from Apache
 			=> version 3.5.0
 
+Plugins
+	Install
+		- Pipeline Maven Integration Plugin
 
-# Add tmp/set.xml to VM #
+# Pipeline Configuration #
 
-$ vim /tmp/set.xml
-	$ i
-	<settings>
-		<servers>
-			<server>
-				<id>myMavenRepo.read</id>
-				<username>myMavenRepo</username>
-				<password>PASS</password>
-			</server>
-			<server>
-				<id>myMavenRepo.write</id>
-				<username>myMavenRepo</username>
-				<password>PASS</password>
-			</server>
-		</servers>
-	</settings>
-	$ :wq
-$ cd /tmp
-$ chmod 777 set.xml
+Definition
+	=> Pipeline script from SCM
+	SCM	=> Git
+		Repository URL
+		=> https://github.com/NicolasGuillaumeSoulie/DevOpsProject/
+		Branches to build 
+		=> /main
+		Script Path
+		=> JenkinsFile
+
+
