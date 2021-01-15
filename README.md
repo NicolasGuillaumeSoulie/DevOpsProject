@@ -41,6 +41,7 @@ Configuration globale des outils
 Plugins
 	Install
 		- Pipeline Maven Integration Plugin
+		- Docker
 
 # Pipeline Configuration #
 
